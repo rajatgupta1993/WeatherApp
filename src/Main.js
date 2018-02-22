@@ -9,7 +9,7 @@ render(){
       <BrowserRouter>
       <div>
         <Route path='/home' component={HomeContainer}/>
-        <Redirect from='/' to='home'/> 
+      
         </div>
       </BrowserRouter>
   )
