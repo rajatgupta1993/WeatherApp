@@ -2,7 +2,7 @@ import React from 'react';
 import * as Constants from '../common/constants';
 import Searchbox from './SearchBox';
 import { Link } from 'react-router-dom';
-
+debugger;
 export default class Home extends React.Component {
 
     constructor() {
@@ -47,17 +47,15 @@ export default class Home extends React.Component {
                 />
 
                 {(todayWeather.main != null) && (<div className="search-box-container">
-
-
                     <div className="search-box-container">
                         <div className="search-box-container">
                             <div className="weather-info">
                                 <div className="weather-info-label"> {`Today's Weather - ${date}`} </div>
                                 <div className="main-temp-text"> {`Current Temperature : ${todayWeather.main.temp}`}&#8451; </div>
                                <div className="main-temp-text">{`Humidity : ${todayWeather.main.humidity}`}</div>
-                               <div className="main-temp-text">{`Presuure : ${todayWeather.main.pressure}`}</div>
+                               <div className="main-temp-text">{`Pressure : ${todayWeather.main.pressure}`}</div>
                                <Link to={`/Weekly/${this.state.searchText}`}>
-                                <div style={{color:#fff, }}>See Weekly Weather Status</div>
+                                <div className="link">See Weekly Weather Status</div>
                                </Link>
                             </div>
                         </div>
@@ -65,6 +63,8 @@ export default class Home extends React.Component {
                 </div>)}
 
             </div>
+
+            // <div> helooo wfnsdjknsv</div>
         )
     }
 }

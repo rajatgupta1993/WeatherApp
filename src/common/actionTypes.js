@@ -1,1 +1,2 @@
 export const SAVE_HOME_DATA = "SAVE_HOME_DATA";
+export const SAVE_WEEKLY_DATA = "SAVE_WEEKLY_DATA"

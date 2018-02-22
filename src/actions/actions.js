@@ -6,3 +6,10 @@ export function saveHomeData(data){
         data 
     }
 } 
+
+export function saveWeeklyData(data){
+    return{
+    type: ActionTypes.SAVE_WEEKLY_DATA,
+    data
+    }
+}

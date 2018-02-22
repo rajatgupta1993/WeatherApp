@@ -6,6 +6,7 @@ import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import rootReducer from './reducers/index';
 
+debugger;
 const store = createStore(rootReducer);
 
 class App extends Component {

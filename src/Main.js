@@ -1,17 +1,34 @@
-import  React  from 'react';
-import * as Constants from './common/constants'; 
+import React from 'react';
 import HomeContainer from './containers/HomeContainer';
-import { Route, BrowserRouter, Link, Switch, Redirect } from 'react-router-dom';
+import WeeklyReportContainer from './containers/WeeklyReportContainer'
+import { Route, BrowserRouter, Switch, Redirect } from 'react-router-dom';
 
-export default class Main extends React.Component{
-render(){
-  return(
+debugger;
+export default class Main extends React.Component {
+  render() {
+    return (
       <BrowserRouter>
-      <div>
-        <Route path='/home' component={HomeContainer}/>
-      
-        </div>
+        
+          <Switch>
+            <Route path='/home' component={HomeContainer} />
+            <Route path='/weekly/:city' component={WeeklyReportContainer} />
+            <Redirect from="/" to="/home" />
+          </Switch>
+        
       </BrowserRouter>
-  )
-}
+
+      // <BrowserRouter >
+        
+      //       <Switch>
+      //         <Route path="/home" component={HomeContainer} />
+      //         <Route path='/weekly' component={WeeklyReportContainer} />
+      //         <Redirect from="/" to="/home" />
+      //       </Switch>
+         
+      // </BrowserRouter>
+
+      // <HomeContainer/>
+
+    )
+  }
 }
