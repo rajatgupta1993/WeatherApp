@@ -38,7 +38,7 @@ export default class Home extends React.Component {
         console.log(todayWeather);
 
         let date = new Date().toLocaleDateString();
-        
+
         return (
             <div >
                 <Searchbox searchText={this.state.searchText}
@@ -52,11 +52,11 @@ export default class Home extends React.Component {
                             <div className="weather-info">
                                 <div className="weather-info-label"> {`Today's Weather - ${date}`} </div>
                                 <div className="main-temp-text"> {`Current Temperature : ${todayWeather.main.temp}`}&#8451; </div>
-                               <div className="main-temp-text">{`Humidity : ${todayWeather.main.humidity}`}</div>
-                               <div className="main-temp-text">{`Pressure : ${todayWeather.main.pressure}`}</div>
-                               <Link to={`/Weekly/${this.state.searchText}`}>
-                                <div className="link">See Weekly Weather Status</div>
-                               </Link>
+                                <div className="main-temp-text">{`Humidity : ${todayWeather.main.humidity}`}</div>
+                                <div className="main-temp-text">{`Pressure : ${todayWeather.main.pressure}`}</div>
+                                <Link to={`/Weekly/${this.state.searchText}`}>
+                                    <div className="link">See Weekly Weather Status</div>
+                                </Link>
                             </div>
                         </div>
                     </div>
